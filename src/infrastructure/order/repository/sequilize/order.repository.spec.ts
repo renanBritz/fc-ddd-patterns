@@ -1,5 +1,4 @@
 import { Sequelize } from "sequelize-typescript";
-import { Op } from "sequelize";
 import Order from "../../../../domain/checkout/entity/order";
 import OrderItem from "../../../../domain/checkout/entity/order_item";
 import Customer from "../../../../domain/customer/entity/customer";
