@@ -10,8 +10,8 @@
     "typescript": "^4.5.5"
   },
   "scripts": {
-    "test": "npm run tsc -- --noEmit && jest",
-    "tsc": "tsc"
+    "pretest": "tsc --noEmit --incremental",
+    "test": "jest"
   },
   "dependencies": {
     "@types/uuid": "^8.3.4",

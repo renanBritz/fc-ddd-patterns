@@ -35,7 +35,18 @@ export default class OrderItem {
     return this._quantity;
   }
 
+  /* Este getter fazia com que o preço*quantidade fosse salvo no banco. Depois
+  *  na hora de recuperar o valor ele multiplicava de novo, o que aumentava
+  *  exponencialmente o preço.
+  *  
+  *  Criei o `originalPrice` pra contornar isso e não precisar alterar todos
+  *  os testes (mas se fosse um app de verdade eu iria refatorar melhor).
+  */
   get price(): number {
     return this._price * this._quantity;
+  }
+
+  get originalPrice(): number {
+    return this._price;
   }
 }
